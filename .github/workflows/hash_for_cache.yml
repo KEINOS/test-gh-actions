@@ -12,10 +12,12 @@ jobs:
     name: hash_for_cache
     steps:
       - uses: actions/checkout@v2
+
       - id: foo
-        uses: KEINOS/gh-action-hash-for-cache@main
+        uses: KEINOS/gh-action-hash-for-cache@v1
         with:
           path: |
             ./testdata/sample1.txt
-      - run: echo "current hash ${{ steps.foo.outputs.hash }}""
+
+      - run: echo "current hash ${{ steps.foo.outputs.hash }}"
         shell: bash
