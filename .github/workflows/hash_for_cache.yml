@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+env:
+  ACTIONS_STEP_DEBUG: "true"
+
+jobs:
+  hash_for_cache:
+    runs-on: ubuntu-latest
+    name: hash_for_cache
+    steps:
+      - uses: actions/checkout@v2
+      - id: foo
+        uses: KEINOS/gh-action-hash-for-cache@v0.1
+        with:
+          path: |
+            ./testdata/sample1.txt
+      - run: echo "current hash ${{ steps.foo.outputs.hash }}""
+        shell: bash

@@ -1,2 +1,3 @@
-# test-gh-actions
-A repo to test my published GitHub actions.
+# Tests for gh-actions
+
+This repository is for testing the GitHub-Action that I have published.
