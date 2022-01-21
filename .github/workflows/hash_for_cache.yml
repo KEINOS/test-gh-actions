@@ -26,6 +26,6 @@ jobs:
             ./testdata/sample1.txt
 
       - run: |
-          expect="92124a1e7e9c5ee0e35c156cff911e56:d41d8cd98f00b204"
+          expect="59dd465085e45174d1a9e0b41eeb4ee1:cf83e1357eefb8bd"
           [[ "${expect}" == "${{ steps.foo.outputs.hash }}" ]]
         shell: bash
