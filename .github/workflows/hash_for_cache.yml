@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - id: foo
-        uses: KEINOS/gh-action-hash-for-cache@main
+        uses: KEINOS/gh-action-hash-for-cache@v1.2.0
         with:
           path: |
             ./testdata/sample1.txt
